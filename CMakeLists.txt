@@ -6,7 +6,7 @@ project(MAGSAC LANGUAGES CXX)
 option(USE_OPENMP "Use OPENMP" ON)
 
 # indicate if the sample project should be generated
-option(CREATE_SAMPLE_PROJECT "Create the Sample Project" ON)
+option(CREATE_SAMPLE_PROJECT "Create the Sample Project" OFF)
 
 SET (CMAKE_BUILD_TYPE "RELEASE")
 
@@ -131,6 +131,7 @@ target_link_libraries(pymagsac PRIVATE
 	${OpenCV_LIBS} 
 	Eigen3::Eigen
 	GraphCutRANSAC
+	#/usr/lib/x86_64-linux-gnu/libtiff.so.5  
 	gflags)
 
 add_library(${PROJECT_NAME} STATIC 
@@ -141,6 +142,7 @@ target_link_libraries(${PROJECT_NAME}
 	${OpenCV_LIBS}
 	Eigen3::Eigen
 	GraphCutRANSAC
+	#/usr/lib/x86_64-linux-gnu/libtiff.so.5  
 	gflags
 )
 
@@ -160,6 +162,7 @@ if (CREATE_SAMPLE_PROJECT)
 		${OpenCV_LIBS}
 		Eigen3::Eigen
 		GraphCutRANSAC
+		/usr/lib/x86_64-linux-gnu/libtiff.so.7  
 		gflags
 	)
 

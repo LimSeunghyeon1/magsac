@@ -25,6 +25,20 @@ int findLine2D_(std::vector<double>& points,
     int min_iters,
     int max_iters,
     int partition_num);
+    
+int findPlane3D_(std::vector<double>& pointsArr,
+    std::vector<bool>& inliers,
+    std::vector<double>& line,
+    std::vector<double>& inlier_probabilities,
+    double imageWidth,
+    double imageHeight,
+    int sampler_id,
+    bool use_magsac_plus_plus,
+    double sigma_max,
+    double conf,
+    int min_iters,
+    int max_iters,
+    int partition_num);
 
 int findFundamentalMatrix_(
     std::vector<double>& correspondences,
